@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jorge.tipcalculator.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/howmuchView"
+        android:text="How much money did you spend?"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/infoView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/twentyBox"
+        android:layout_toStartOf="@+id/twentyBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is a simple tip calculator that will take the amount that you spent on your meal and will given you a suggestion for how much to tip."
+        android:id="@+id/infoView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10%"
+        android:id="@+id/tenBox"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        android:id="@+id/fifteenBox"
+        android:layout_alignTop="@+id/tenBox"
+        android:layout_centerHorizontal="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:id="@+id/twentyBox"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputVIew"
+        android:hint="amount please"
+        android:layout_below="@+id/howmuchView"
+        android:layout_alignRight="@+id/fifteenBox"
+        android:layout_alignEnd="@+id/fifteenBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tipAmount"
+        android:hint="tip"
+        android:textSize="14pt"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/tipLocation"
+        android:text="This is the tip suggestion:"
+        android:gravity="center"
+        android:layout_above="@+id/tipAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/button"
+        android:layout_below="@+id/fifteenBox"
+        android:layout_centerHorizontal="true"
+        android:onClick="giveTip"/>
+</RelativeLayout>
